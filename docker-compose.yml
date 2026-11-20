@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: trippilot-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: trippilot
+      POSTGRES_USER: trippilot
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - trippilot_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U trippilot -d trippilot"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  trippilot_data:

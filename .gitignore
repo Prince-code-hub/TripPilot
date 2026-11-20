@@ -1,0 +1,28 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Java / Gradle
+.gradle/
+build/
+**/build/
+*.class
+
+# Angular / Node
+node_modules/
+dist/
+.angular/
+coverage/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
