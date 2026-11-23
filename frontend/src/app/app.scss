@@ -1,0 +1,316 @@
+
+/* Main application layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f7f2;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: #183b32;
+  color: #ffffff;
+  padding: 30px 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TripPilot brand */
+.brand {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 55px;
+}
+
+/* Sidebar navigation */
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-heading {
+  font-size: 11px;
+  color: #a9c1b8;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.nav-link {
+  color: #dce8e2;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.nav-link.active {
+  background-color: #31594d;
+  color: #ffffff;
+}
+.nav-link:focus {
+  outline: none;
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid #c6a46b;
+  outline-offset: 3px;
+}
+/* Sidebar bottom text */
+.sidebar-bottom {
+  margin-top: auto;
+  font-size: 12px;
+  color: #a9c1b8;
+}
+
+.sidebar-bottom span {
+  display: block;
+  margin-top: 8px;
+}
+
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 30px 45px;
+  min-width: 0;
+}
+
+/* Top navigation */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 65px;
+  color: #344b42;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #183b32;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Welcome section */
+.welcome-section {
+  margin-bottom: 35px;
+}
+
+.eyebrow {
+  color: #a17b48;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.welcome-section h1 {
+  font-size: 42px;
+  color: #183b32;
+  margin: 0 0 15px;
+}
+
+.welcome-section > p:last-child {
+  color: #777d76;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Destination search */
+.search-section {
+  margin-bottom: 65px;
+}
+
+.search-section label {
+  display: block;
+  font-weight: bold;
+  color: #344b42;
+  margin-bottom: 12px;
+}
+
+.search-box {
+  display: flex;
+  gap: 12px;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #e8e6de;
+  border-radius: 12px;
+  max-width: 750px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.search-box button {
+  background-color: #183b32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  cursor: pointer;
+}
+
+
+/* Popular destinations section */
+.destinations-section {
+  margin-bottom: 40px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  color: #183b32;
+  font-size: 26px;
+  margin: 0;
+}
+
+.section-heading a {
+  color: #31594d;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Destination cards */
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.destination-card {
+  background-color: white;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #eae8e0;
+  transition: transform 0.2s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+}
+
+.destination-image {
+  height: 190px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* Destination photographs */
+
+.destination-image.switzerland {
+  background-image: url('https://images.unsplash.com/photo-1719054333776-ba30cd761b22?auto=format&fit=crop&w=1000&q=80');
+}
+
+.destination-image.japan {
+  background-image: url('https://images.unsplash.com/photo-1722197913361-0c5de5281537?auto=format&fit=crop&w=1000&q=80');
+}
+
+.destination-image.italy {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7f/Amalfi_Coast%2C_Amalfi%2C_Italy_%28Unsplash_QVU_5fjXWe0%29.jpg');
+}
+
+
+.destination-info {
+  padding: 20px;
+}
+
+.destination-info h3 {
+  color: #183b32;
+  font-size: 19px;
+  margin: 0 0 7px;
+}
+
+.destination-info p {
+  color: #777d76;
+  font-size: 14px;
+  margin: 0 0 15px;
+}
+
+.destination-info span {
+  color: #a17b48;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+
+/* Tablet screens */
+@media (max-width: 1000px) {
+  .main-content {
+    padding: 25px;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 650px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: auto;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .brand {
+    margin-bottom: 20px;
+  }
+
+  .sidebar-bottom {
+    display: none;
+  }
+
+  .main-content {
+    padding: 25px 18px;
+  }
+
+  .topbar {
+    margin-bottom: 40px;
+  }
+
+  .welcome-section h1 {
+    font-size: 30px;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+}
+
